@@ -1,0 +1,76 @@
+#samson {
+   padding-top: 20px;
+   background-color: purple !important;
+}
+
+.dashboard-content {
+    margin-top: 30px;
+}
+#logincard{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    margin-bottom: 100px;
+}
+#signupcard{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+   margin-bottom: 100px;
+}
+
+.navbar-brand{
+    margin-right: 10px;
+    margin-left: 30px;
+}
+#footer{
+position:sticky;
+    margin-top: 500px;
+    background-color:whitesmoke;
+}
+#foot{
+    margin-top: 50px;
+}
+#carouselExampleSlidesOnly{
+    width:600px;
+}
+.d-flex{
+    width: 600px;
+    margin: 18px;
+}
+.form-control {
+    border-radius: 20px;
+    height: 40px;
+}
+.btn-outline-success{
+    border-radius: 20px;
+}
+.sidebar{
+    height: 500px;
+  width: 209px;
+
+  position:fixed;
+  }
+  .floating-form{
+    padding: 40px;
+  }
+  .up{
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+  .row{
+    
+  }
+  #smallcard{
+
+  }
+
+  #bigcard{
+    
+    margin: top 20px; ;
+    margin-bottom: 100px;
+  }
+  
+  #group {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 25px;
+
+  }
