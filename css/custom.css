@@ -1,7 +1,3 @@
-#samson {
-   padding-top: 20px;
-   background-color: purple !important;
-}
 
 .dashboard-content {
     margin-top: 30px;
@@ -14,7 +10,6 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
    margin-bottom: 100px;
 }
-
 .navbar-brand{
     margin-right: 10px;
     margin-left: 30px;
@@ -22,7 +17,8 @@
 #footer{
 position:sticky;
     margin-top: 500px;
-    background-color:whitesmoke;
+    background-color: rgb(38, 36, 36);
+    color: whitesmoke;
 }
 #foot{
     margin-top: 50px;
@@ -44,33 +40,73 @@ position:sticky;
 .sidebar{
     height: 500px;
   width: 209px;
-
+  margin-top: 50px;
   position:fixed;
   }
   .floating-form{
     padding: 40px;
-  }
+}
   .up{
     margin-left: 100px;
     margin-top: 30px;
     margin-bottom: -30px;
-  }
+}
   .row{
     
-  }
-  #smallcard{
-
-  }
-
+}
+  
   #bigcard{
     
     margin: top 20px; ;
-    margin-bottom: 100px;
-  }
+    margin-bottom: 80px;
+}
   
   #group {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-right: 25px;
 
-  }
+}
+.carouselExampleSlidesOnly{
+    margin-top: 500px;
+}
+#group{
+    box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.3);
+    border-radius: 20px;
+}
+
+#searchbtn{
+    border-radius: 20px;
+    height: 39px;
+}
+
+
+
+#thenav{
+    background-color: #44a078;
+}
+
+
+
+.nav-link{
+    color: white;
+}
+.offcanvas{
+    background-color: #44a078;
+    color: white;
+}
+.dropdown-item{
+    color: white;
+}
+.card-header{
+    color: white;
+    background-color: #3f9670;
+}
+
+#smallcard:hover{
+    transform: scale(1.1);
+}
+#smallcard{
+    margin-bottom: 30px;
+    }
+    
