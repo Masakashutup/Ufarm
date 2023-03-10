@@ -7,45 +7,49 @@
       <input class="form-control me-2" type="search"  placeholder= " Search for Products" aria-label="Search">
       <button id="searchbtn" class="btn btn-light" type="submit">Search</button>
     </form>
-    <i style="color: white; font-size: 33px;" class="fa-sharp fa-solid fa-user-large"></i>
-    <i class="fa-solid fa-bell fa-shake" style="font-size: 23px; color: white;"></i>
-    <i class="fa-sharp fa-solid fa-cart-shopping" style="font-size: 23px; color: white;"></i>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    <!-- <i style="color: white; font-size: 33px;" class="fa-sharp fa-solid fa-user-large"></i> -->
+    <a href="../others/notifications.html"><i class="fa-solid fa-bell fa-shake" style="font-size: 23px; color: white;"></i></a>
+    <a href="../others/cart.html"><i class="fa-sharp fa-solid fa-cart-shopping" style="font-size: 23px; color: white;"></i></a>
+    <button  style="color: white;" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 href="../index.html" class="offcanvas-title" id="offcanvasNavbarLabel">Ufarm</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <a style=" text-decoration: none; color: white;" href="../index.html"><h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ufarm</h5></a>
+        <button style="color: white;"  type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+      <hr>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a style="color: white;" class="nav-link active" aria-current="page" href="#">Home</a>
+            <a style="color: white;" class="nav-link active" aria-current="page" href="../home.html">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categories
             </a>
             <ul style="background-color: #44a078; color: white;" class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Horticulture</a></li>
-              <li><a class="dropdown-item" href="#">Poultry</a></li>
-              <li><a class="dropdown-item" href="#">Diary Products</a></li>
+              <li><a id="hort" class="dropdown-item" href="#horticulture">Horticulture</a></li>
+              <li><a id="poul" class="dropdown-item" href="#poultry">Poultry</a></li>
+              <li><a id="dia" class="dropdown-item" href="#diary">Diary Products</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../auth/registerUF.html">Register</a>
+            <a class="nav-link" href="../others/cart.html">Shopping Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Community</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="../others/AboutUs.html">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Help Center</a>
           </li>
+
+          <hr>
+          <div id="foot" class="col">
+            <!-- <small>Uganda's solution to the agricultural sector challenges and problems</small> -->
+            <p style="font-size: 10px;  "> <span style="font-size: 15px;">Ufarm</span> © 2023</p>
+          </div>
 
         </ul>
       </div>
