@@ -20,93 +20,60 @@
             <div class="col">
 
             </div>
-            <div class="col-6">
-                <div class="opacity-100" id="signupcard" class="card">
-
-                    <h1 style="text-align: center; color:white;">Register</h1>
-
+            <div class="col-7">
+                <div style="background-color:  rgba(255, 255, 255, 0);" id="signupcard" class="card">
+                    <div id="yo" class="card-header">
+                        <h1 style="text-align: center;">Register</h1>
+                    </div>
                     <div class="card-body">
-                        <form class="floating-form">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">Name</label>
+                        <form id="register" class="row g-3">
+                            <div class="col-md-6">
+                              <label for="inputEmail4" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="inputEmail4">
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">Ward</label>
+                            <div class="col-md-6">
+                              <label for="inputPassword4" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="inputPassword4">
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">FO number</label>
+                            <div class="col-12">
+                              <label for="inputAddress" class="form-label">Address</label>
+                              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="date" class="form-control" id="dob" placeholder="Date Of Registration">
-                                <label for="dob">Date of Registration</label>
+                            <div class="col-12">
+                              <label for="inputAddress2" class="form-label">Address 2</label>
+                              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">Gender</label>
+                            <div class="col-md-6">
+                              <label for="inputCity" class="form-label">City</label>
+                              <input type="text" class="form-control" id="inputCity">
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="date" class="form-control" id="dob" placeholder="Date Of Birth">
-                                <label for="dob">Date of Birth</label>
+                            <div class="col-md-4">
+                              <label for="inputState" class="form-label">State</label>
+                              <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                              </select>
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="textarea" class="form-control" id="floatingName" placeholder="activities">
-                                <label for="floatingName">Activities</label>
+                            <div class="col-md-2">
+                              <label for="inputZip" class="form-label">Zip</label>
+                              <input type="text" class="form-control" id="inputZip">
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">NIN number</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">Phone number</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">Address</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingName"
-                                    placeholder="name@example.com">
-                                <label for="floatingName">Residence Type</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="floatingPassword"
-                                    placeholder="Password">
-                                <label for="floatingPassword">Period at Ward (years)</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                                <label class="form-check-label" for="invalidCheck2">
-                                    Agree to terms and conditions
+                            <div class="col-12">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                  Check me out
                                 </label>
+                              </div>
                             </div>
-                            <br>
-                            <button type="button" class="btn btn-success">Register</button>
-                            <br>
-                            <br>
-                            <p>
-                                Please register from here. If you have any issues, please contact <a
-                                    href="mailto:support@ufarm.org">support@ufram.org</a>
-                            </p>
-                            <p>If you already have an account, please go to the <a href="/auth/login.html">Login</a>
-                                page</p>
-                        </form>
+                            <div class="col-12">
+                              <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                          </form>
                     </div>
                 </div>
             </div>
             <div class="col">
-
             </div>
         </div>
     </div>
