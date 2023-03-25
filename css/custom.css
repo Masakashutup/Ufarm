@@ -67,11 +67,21 @@
     margin-bottom: -30px;
 }
 
-
-#bigcard {
-
+#bigcard3 {
+    padding: 20px;
     margin: top 20px;
-    ;
+    margin-bottom: 80px;
+}
+
+#bigcard2 {
+    padding: 20px;
+    margin: top 20px;
+    margin-bottom: 80px;
+}
+
+#bigcard1 {
+    padding: 20px;
+    margin: top 20px;
     margin-bottom: 80px;
 }
 
@@ -99,7 +109,7 @@
 
 
 #thenav {
-    background-color: #44a078;
+    background-color: #348964;
 }
 
 
@@ -109,7 +119,7 @@
 }
 
 .offcanvas {
-    background-color: #44a078;
+    background-color: #348964;
     color: white;
 }
 
@@ -126,7 +136,6 @@
 }
 
 #smallcard {
-    margin-left: 18px;
     margin-bottom: 30px;
 }
 
@@ -145,7 +154,8 @@
     background-image: url(../photos/photo14.jpg);
     background-size: cover;
 }
-#register{
+
+#register {
     padding: 40px;
     color: white;
 }

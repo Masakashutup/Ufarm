@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="../css/custom.css">
   <title>U-Farm</title>
 </head>
 
-<body>
+<body style="background-color: rgb(244, 244, 244)">
   <!-- Nav starts here -->
   <div w3-include-html="../includes/navbar.html"></div>
   <!-- Nav ends here -->
@@ -24,10 +24,18 @@
     <div class="row">
       <div class="col-2">
         <div class="sidebar">
-          <p> Orders <i class="fa fa-shop"></i></p>
-          <p>Upload <i class="fas fa-arrow-alt-circle-up"></i></p>
-          <p> Community  <i class="fas fa-user-friends"></i></p>
-          <p> Help Center  <i class="far fa-comment-dots"></i></p>
+          <p>
+          <h6> Orders <i class="fa fa-shop"></i></h6>
+          </p>
+          <p>
+          <h6>Upload <i class="fas fa-arrow-alt-circle-up"></i></h6>
+          </p>
+          <p>
+          <h6> Community <i class="fas fa-user-friends"></i></h6>
+          </p>
+          <p>
+          <h6> Help Center <i class="far fa-comment-dots"></i></h6>
+          </p>
         </div>
       </div>
       <div class="col-10">
@@ -85,82 +93,97 @@
 
 
 
-        <div id="signupcard" class="card">
-          <div class="up">
-            <h4>Upload product</h4>
-            <p>Please fill in the different items in order to upload your product </p>
-          </div>
-          <div class="card-body">
-            <form class="floating-form">
+        <div id="signupcard" class="card" ">
+          <div class=" up">
+          <h4>Upload product</h4>
+          <p>Please fill in the different items in order to upload your product </p>
 
-              <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Name of product:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name of product">
-              </div>
-              <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Ward:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter ward name">
-              </div>
+        </div>
+        <div class="card-body">
+          <form class="row g-3" style="margin: 30px;"  action="#" name="upload" onsubmit="return Validate();" method="POST">
 
-              <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Date:</label>
-                <input type="date" class="form-control" id="formGroupExampleInput"
-                  placeholder="Example input placeholder">
-              </div>
-              <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Unit Price:
-                </label>
-                <input type="text" class="form-control" id="formGroupExampleInput2"
-                  placeholder="Enter the unit price in Ugx">
-              </div>
-              <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Quantity:
-                </label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter the Quantity">
-              </div>
+            <div class="col-md-11">
+              <label for="formGroupExampleInput" class="form-label">Name of product:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name of product">
+              <small id="nameErr"></small>
+            </div>
 
-              <div class="col-md-4">
-                <label for="inputState" class="form-label">Mode of Payment</label>
-                <select id="inputState" class="form-select">
-                  <option selected>cash</option>
-                  <option>mobile money</option>
-                </select>
-              </div>
-              <br>
+            <div class="col-md-11">
+              <label for="formGroupExampleInput2" class="form-label">Ward:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter ward name">
+              <small id="wardErr"></small>
+            </div>
 
-              <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                  style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Directions</label>
-              </div>
-              <br>
+            <div class="col-md-11">
+              <label for="formGroupExampleInput" class="form-label">Date:</label>
+              <input type="date" class="form-control" id="formGroupExampleInput"
+                placeholder="Example input placeholder">
+                <small id="dorErr"></small>
+            </div>
 
-              <div class="col-md-4">
-                <label for="inputState" class="form-label">Mode of Delivery</label>
-                <select id="inputState" class="form-select">
-                  <option selected>pick up</option>
-                  <option>home delivery</option>
-                </select>
-              </div>
-              <br>
+            <div class="col-md-6">
+              <label for="formGroupExampleInput2" class="form-label">Unit Price:
+              </label>
+              <input type="text" class="form-control" id="formGroupExampleInput2"
+                placeholder="Enter the unit price in Ugx">
+                <small id="unitErr"></small>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="formGroupExampleInput2" class="form-label">Quantity:
+              </label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter the Quantity">
+              <small id="quatErr"></small>
+            </div>
 
-              <div class="col-md-4">
-                <label for="inputState" class="form-label"> Type of Produce</label>
-                <select id="inputState" class="form-select">
-                  <option selected>organic</option>
-                  <option>none organic</option>
-                </select>
-              </div>
-              <br>
+            <div class="col-md-5">
+              <label for="inputState" class="form-label">Mode of Payment</label>
+              <select id="inputState" class="form-select">
+                <option selected>cash</option>
+                <option>mobile money</option>
+              </select>
+              <small id="payErr"></small>
+            </div>
+            <br>
 
-              <button type="button" class="btn btn-success">Upload</button>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Directions</label>
+              <small id="actErr"></small>
+            </div>
+            <br>
 
-              </p>If you have any issues, please contact <a href="mailto:support@ufarm.org">support@ufram.org</a></p>
-            </form>
-          </div>
+            <div class="col-md-5">
+              <label for="inputState" class="form-label">Mode of Delivery</label>
+              <select id="inputState" class="form-select">
+                <option selected>pick up</option>
+                <option>home delivery</option>
+              </select>
+              <small id="delErr"></small>
+            </div>
+            <br>
+
+            <div class="col-md-5">
+              <label for="inputState" class="form-label"> Type of Produce</label>
+              <select id="inputState" class="form-select">
+                <option selected>organic</option>
+                <option>none organic</option>
+              </select>
+              <small id="prodErr"></small>
+            </div>
+            <br>
+
+
+            <button type="submit" style="width: 200px; margin-left: 300px; margin-top: 40px;"
+              class="btn btn-success">Upload</button>
+
+            </p>If you have any issues, please contact <a href="mailto:support@ufarm.org">support@ufram.org</a></p>
+          </form>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- Nav starts here -->

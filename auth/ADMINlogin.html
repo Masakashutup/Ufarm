@@ -8,7 +8,7 @@
   <link href="../css/boostrap-5.3/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../css/custom.css">
-  <title>Login - U-Farm</title>
+  <title>Login Ufarm</title>
 </head>
 
 <body class="loginbody" onload="document.register.email.focus()">
@@ -29,6 +29,7 @@
 
             <form class="floating-form" id="regForm" action="#" name="register" onsubmit="return Validate();"
               method="POST">
+
               <fieldset>
                 <div class="form-floating mb-3">
                   <input type="email" class="form-control" id="floatingInput" name="email"
@@ -43,15 +44,17 @@
                   <label for="floatingPassword">Password</label>
                   <small id="passErr"></small>
                 </div>
-
-                <button type="submit" class="btn btn-success">Login</button>
               </fieldset>
-<br>
+
+              <button type="submit" class="btn btn-success">Login</button>
+
+              <br>
               <p>
                 Please login from here. If you have any issues, please contact <a style="color: rgb(74, 223, 249);"
                   href="mailto:support@ufarm.org">support@ufram.org</a>
               </p>
-              <p>If you have no account, please sign up here <a style= "color: rgb(48, 220, 250);" href="/auth/register.html">Sign up</a> .</p>
+              <p>If you have no account, please sign up here <a style="color: rgb(48, 220, 250);"
+                  href="/auth/register.html">Sign up</a> .</p>
             </form>
 
           </div>
