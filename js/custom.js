@@ -32,10 +32,10 @@ function show(){
   document.getElementById('bigcard1').style.display ='block';
   document.getElementById('bigcard2').style.display ='block';
   document.getElementById('bigcard3').style.display ='block';
-  document.getElementById('button1').style.backgroundColor="green"
-  document.getElementById('button2').style.backgroundColor="white"
-  document.getElementById('button3').style.backgroundColor="white"
-  document.getElementById('button4').style.backgroundColor="white"
+  // document.getElementById('button1').style.backgroundColor="green"
+  // document.getElementById('button2').style.backgroundColor="white"
+  // document.getElementById('button3').style.backgroundColor="white"
+  // document.getElementById('button4').style.backgroundColor="white"
 }
 function show1(){
   document.getElementById('bigcard1').style.display ='block';

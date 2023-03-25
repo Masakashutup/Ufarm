@@ -19,26 +19,33 @@
   <div w3-include-html="../includes/navbar.html"></div>
   <!-- Nav ends here -->
 
-  <div class="container" style="margin-top: 150px">
+  <div class="container-fluid" style="margin-top: 150px">
 
     <div class="row">
-      <div class="col-2">
+      <div class="col-3">
         <div class="sidebar">
           <p>
-          <h6> Orders <i class="fa fa-shop"></i></h6>
+          <h6 style="text-align: center;"> Orders <i class="fa fa-shop"></i></h6>
           </p>
+          <hr>
           <p>
-          <h6>Upload <i class="fas fa-arrow-alt-circle-up"></i></h6>
+          <h6 style="text-align: center;">Upload <i class="fas fa-arrow-alt-circle-up"></i></h6>
           </p>
+          <hr>
           <p>
-          <h6> Community <i class="fas fa-user-friends"></i></h6>
+          <h6 style="text-align: center;"> Community <i class="fas fa-user-friends"></i></h6>
           </p>
+          <hr>
           <p>
-          <h6> Help Center <i class="far fa-comment-dots"></i></h6>
+          <h6 style="text-align: center;"> Help Center <i class="far fa-comment-dots"></i></h6>
           </p>
+          <hr>
+          <p style="font-size: 10px; text-align: center; margin-top: 80px;"> <span style="font-size: 15px;">Ufarm</span>
+            © 2023</p>
         </div>
       </div>
-      <div class="col-10">
+
+      <div class="col-9">
         <h4>Dashboard <i class="fa fa-line-chart" style="font-size:24px"></i></h4>
         <br>
         <div id="signupcard" class="card">
@@ -100,7 +107,8 @@
 
         </div>
         <div class="card-body">
-          <form class="row g-3" style="margin: 30px;"  action="#" name="upload" onsubmit="return Validate();" method="POST">
+          <form class="row g-3" style="margin: 30px;" action="#" name="upload" onsubmit="return Validate();"
+            method="POST">
 
             <div class="col-md-11">
               <label for="formGroupExampleInput" class="form-label">Name of product:</label>
@@ -118,7 +126,7 @@
               <label for="formGroupExampleInput" class="form-label">Date:</label>
               <input type="date" class="form-control" id="formGroupExampleInput"
                 placeholder="Example input placeholder">
-                <small id="dorErr"></small>
+              <small id="dorErr"></small>
             </div>
 
             <div class="col-md-6">
@@ -126,9 +134,9 @@
               </label>
               <input type="text" class="form-control" id="formGroupExampleInput2"
                 placeholder="Enter the unit price in Ugx">
-                <small id="unitErr"></small>
+              <small id="unitErr"></small>
             </div>
-            
+
             <div class="col-md-6">
               <label for="formGroupExampleInput2" class="form-label">Quantity:
               </label>
