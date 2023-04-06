@@ -10,7 +10,7 @@
 }
 
 #signupcard {
-    box-shadow: 0px 8px 16px 0px black;
+    box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.9);
     margin-bottom: 100px;
     border-radius: 20px;
 
@@ -24,7 +24,7 @@
 #footer {
     position: sticky;
     margin-top: 200px;
-    background-color: rgb(38, 36, 36);
+    background-color: rgb(15, 15, 19);
     color: whitesmoke;
 }
 
@@ -54,7 +54,7 @@
     height: 500px;
     width: 265px;
     margin-top: -60px;
-    background-color: rgb(26, 25, 25);
+    background-color: rgb(15, 15, 19);
     color: white;
     position: fixed;
 }

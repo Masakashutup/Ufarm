@@ -3,7 +3,6 @@ const Validate = () => {
   // picking input fields with their names
   let email = document.register.email;
   let password = document.register.password;
-
   // pick error sections
   let mailError = document.getElementById("mailErr");
   let passError = document.getElementById("passErr");
@@ -53,8 +52,68 @@ const Validate = () => {
     password.style.border = "2px solid green"
     passError.textContent = "";
   }
-
 }
+
+
+// validation function
+const Validate4 = () => {
+  // picking input fields with their names
+  let password = document.register.password;
+  let uniqueno = document.register.uniqueno
+  // pick error sections
+  let passError = document.getElementById("passErr");
+  let uniquenoError = document.getElementById("uniquenoErr");
+
+  // unique number validations
+  const aoregex = /^AO-([0-9]{3})+$/;
+  const ufregex = /^UF-([0-9]{3})+$/;
+  const foregex = /^FO-([0-9]{3})+$/
+  if (uniqueno.value == "") {
+    uniqueno.style.border = "2px solid red"
+    uniquenoError.textContent = "Unique number is required";
+    uniquenoError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    uniqueno.focus();
+    return false;
+  } else if (!(uniqueno.value.match(aoregex) || uniqueno.value.match(ufregex) || uniqueno.value.match(foregex))) {
+    uniqueno.style.border = "2px solid red"
+    uniquenoError.textContent = "Unique number must follow this formart AO-000";
+    uniquenoError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    uniqueno.focus();
+    return false;
+  } else {
+    uniqueno.style.border = "2px solid green"
+    uniquenoError.textContent = "";
+  }
+
+  // password validation
+  if (password.value == "") {
+    password.style.border = "2px solid red"
+    passError.textContent = "Password is required";
+    passError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    password.focus();
+    return false;
+  }
+  else if (password.value.length < 5) {
+    password.style.border = "2px solid red"
+    passError.textContent = "Please the password must be atleast 5 characters";
+    passError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    password.focus();
+    return false;
+  } else if (password.value.length > 15) {
+    password.style.border = "2px solid red"
+    passError.textContent = "Please the password must not be more than 15 characters";
+    passError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    password.focus();
+    return false;
+  }
+  else {
+    password.style.border = "2px solid green"
+    passError.textContent = "";
+  }
+}
+
+
+
 
 const Validate1 = (event) => {
   let error = 0
@@ -67,11 +126,14 @@ const Validate1 = (event) => {
   let activities = document.getElementById("activities");
   let nin = document.getElementById("nin");
   let contact = document.getElementById("contact");
-  let male = document.getElementById("male");
-  let female = document.getElementById("female");
   let directions = document.getElementById("directions");
   let residence = document.getElementById("residence");
   let period = document.getElementById("period");
+  let male = document.getElementById("male");
+  let female = document.getElementById("female");
+  
+  
+  
 
 
   // pick error sections
@@ -83,11 +145,10 @@ const Validate1 = (event) => {
   let activityError = document.getElementById("actErr");
   let ninError = document.getElementById("ninErr");
   let contactError = document.getElementById("contactErr");
-  let genderError = document.getElementById("genderErr");
   let dirError = document.getElementById("dirErr");
   let resError = document.getElementById("resErr");
   let periodError = document.getElementById("periodErr");
-
+  let genderError = document.getElementById("genderErr");
 
   // validating first name input emptiness
   if (name.value == "") {
@@ -317,7 +378,7 @@ const Validate1 = (event) => {
     error++
   }
 
-  else if (dirError.value.length > 20) {
+  else if (directions.value.length > 20) {
     directions.style.border = "2px solid red"
     dirError.innerHTML = "Please the last name must be less than 11 letters"
     dirError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
@@ -335,18 +396,19 @@ const Validate1 = (event) => {
     error++
   }
 
-  else if (period.value.length < 4) {
+  else if (period.value.length < 2) {
     period.style.border = "2px solid red"
     periodError.innerHTML = "Please the last name must be atleast 3 letters"
     periodError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++
   }
 
-  else if (period.value.length > 20) {
+  else if (period.value < 10) {
     period.style.border = "2px solid red"
     periodError.innerHTML = "Please the last name must be less than 11 letters"
     periodError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++
+    
   } else {
     period.style.border = "2px solid green"
     periodError.textContent = "";
@@ -360,7 +422,7 @@ const Validate1 = (event) => {
     resError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++
   } else {
-    res.style.border = "2px solid green"
+    residence.style.border = "2px solid green"
     resError.textContent = "";
   }
 
@@ -368,7 +430,6 @@ const Validate1 = (event) => {
     event.preventDefault()
   }
 }
-
 
 
 const Validate2 = (event) => {
@@ -611,6 +672,225 @@ const Validate2 = (event) => {
     DOR.style.border = "2px solid green"
     dorError.textContent = "";
   }
+
+  if (error > 0) {
+    event.preventDefault()
+  }
+}
+
+
+const Validate5 = (event) => {
+  let error = 0
+  // pick inputs
+  let product = document.getElementById("product");
+  let ward = document.getElementById("ward")
+  let date = document.getElementById("date")
+  let price = document.getElementById("price");
+  let quantity = document.getElementById("quantity");
+  let pay = document.getElementById("pay");
+  let dir = document.getElementById("dir");
+  let delivery = document.getElementById("delivery");
+  let type = document.getElementById("type");
+
+
+
+  // pick error sections
+  let nameError = document.getElementById("nameErr")
+  let wardError = document.getElementById("wardErr")
+  let payError = document.getElementById("payErr")
+  let dateError = document.getElementById("dateErr");
+  let priceError = document.getElementById("priceErr");
+  let quantityError = document.getElementById("quantityErr");
+  let dirError = document.getElementById("dirErr");
+  let deliveryError = document.getElementById("delErr");
+  let typeError = document.getElementById("typeErr");
+
+
+
+  // validating first name input emptiness
+  if (product.value == "") {
+    product.style.border = "2px solid red"
+    nameError.innerHTML = "Please first name can not be empty"
+    nameError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating first name for minimum length
+  else if (product.value.length < 5) {
+    product.style.border = "2px solid red"
+    nameError.innerHTML = "Please the first name must be atleast 3 letters"
+    nameError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating first name for maximum length
+  else if (product.value.length > 50) {
+    product.style.border = "2px solid red"
+    nameError.innerHTML = "Please the first name must be less than 11 letters"
+    nameError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    product.style.border = "2px solid green"
+    nameError.innerHTML = ""
+  }
+
+
+// validating last name input emptiness
+if (ward.value == "") {
+  ward.style.border = "2px solid red"
+  wardError.innerHTML = "Please last name can not be empty"
+  wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+// validating last name for minimum length
+else if (ward.value.length < 4) {
+  ward.style.border = "2px solid red"
+  wardError.innerHTML = "Please the last name must be atleast 3 letters"
+  wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+// validating last name for maximum length
+else if (ward.value.length > 20) {
+  ward.style.border = "2px solid red"
+  wardError.innerHTML = "Please the last name must be less than 11 letters"
+  wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+} else {
+  ward.style.border = "2px solid green"
+  wardError.textContent = "";
+}
+
+// date  validations
+if (date.value == "") {
+  date.style.border = "2px solid red"
+  dateError.innerHTML = "Please last name can not be empty"
+  dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+
+else if (date.value.length < 4) {
+  date.style.border = "2px solid red"
+  dateError.innerHTML = "Please the last name must be atleast 3 letters"
+  dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+
+else if (date.value.length > 20) {
+  date.style.border = "2px solid red"
+  dateError.innerHTML = "Please the last name must be less than 11 letters"
+  dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+} else {
+  date.style.border = "2px solid green"
+  dateError.textContent = "";
+}
+
+
+if (price.value == "") {
+  price.style.border = "2px solid red"
+  priceError.innerHTML = "Please last name can not be empty"
+  priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+
+else if (price.value.length < 4) {
+  price.style.border = "2px solid red"
+  priceError.innerHTML = "Please the last name must be atleast 3 letters"
+  priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+
+else if (price.value.length > 20) {
+  price.style.border = "2px solid red"
+  priceError.innerHTML = "Please the last name must be less than 11 letters"
+  priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+} else {
+  price.style.border = "2px solid green"
+  priceError.textContent = "";
+}
+
+
+if (quantity.value == "") {
+  quantity.style.border = "2px solid red"
+  quantityError.innerHTML = "Please last name can not be empty"
+  quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+
+else if (quantity.value.length < 4) {
+  quantity.style.border = "2px solid red"
+  quantityError.innerHTML = "Please the last name must be atleast 3 letters"
+  quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+}
+
+else if (quantity.value.length > 20) {
+  quantity.style.border = "2px solid red"
+  quantityError.innerHTML = "Please the last name must be less than 11 letters"
+  quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+} else {
+  quantity.style.border = "2px solid green"
+  quantityError.textContent = "";
+}
+
+// pay validations
+if (pay.value == "") {
+  pay.style.border = "2px solid red";
+  payError.textContent = "Please select a payment mode";
+  payError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++
+} else {
+  pay.style.border = "2px solid green"
+  payError.textContent = "";
+}
+
+  // validating directions input emptiness
+  if (dir.value == "") {
+    dir.style.border = "2px solid red"
+    dirError.innerHTML = "Please first name can not be empty"
+    dirError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating directions for minimum length
+  else if (dir.value.length < 5) {
+    dir.style.border = "2px solid red"
+    dirError.innerHTML = "Please the first name must be atleast 3 letters"
+    dirError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating directions for maximum length
+  else if (dir.value.length > 50) {
+    dir.style.border = "2px solid red"
+    dirError.innerHTML = "Please the first name must be less than 11 letters"
+    dirError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    dir.style.border = "2px solid green"
+    dirError.innerHTML = ""
+  }
+
+  // pay type validations
+  if (delivery.value == "") {
+    delivery.style.border = "2px solid red";
+    deliveryError.textContent = "Please select a role";
+    deliveryError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    delivery.style.border = "2px solid green"
+    deliveryError.textContent = "";
+  }
+
+  // type validations
+  if (type.value == "") {
+    type.style.border = "2px solid red";
+    typeError.textContent = "Please select a role";
+    typeError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    type.style.border = "2px solid green"
+    typeError.textContent = "";
+  }
+
 
   if (error > 0) {
     event.preventDefault()

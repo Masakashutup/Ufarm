@@ -14,7 +14,7 @@
   <title>U-Farm</title>
 </head>
 
-<body style="background-color: rgb(244, 244, 244)">
+<body style="background-color: rgb(234, 233, 233); color: white;">
   <!-- Nav starts here -->
   <div w3-include-html="../includes/navbar.html"></div>
   <!-- Nav ends here -->
@@ -25,6 +25,11 @@
       <div class="col-3">
         <div class="sidebar">
           <p>
+          <h5 style="text-align: center; font-family:Trebuchet MS, Times, serif; color:rgb(0, 255, 106);"> Urban Farmer
+            Dashboard </h5>
+          </p>
+          <hr>
+          <p>
           <h6 style="text-align: center;"> Orders <i class="fa fa-shop"></i></h6>
           </p>
           <hr>
@@ -33,11 +38,11 @@
           </p>
           <hr>
           <p>
-          <h6 style="text-align: center;"> Community <i class="fas fa-user-friends"></i></h6>
+          <h6 style="text-align: center;"> Help Center <i class="far fa-comment-dots"></i></h6>
           </p>
           <hr>
           <p>
-          <h6 style="text-align: center;"> Help Center <i class="far fa-comment-dots"></i></h6>
+          <h6 style="text-align: center;"> Sign out <i class="fas fa-user-friends"></i> </h6>
           </p>
           <hr>
           <p style="font-size: 10px; text-align: center; margin-top: 80px;"> <span style="font-size: 15px;">Ufarm</span>
@@ -46,127 +51,132 @@
       </div>
 
       <div class="col-9">
-        <h4>Dashboard <i class="fa fa-line-chart" style="font-size:24px"></i></h4>
-        <br>
-        <div id="signupcard" class="card">
-          <div class="up">
-            <h4>Orders</h4>
-            <br>
-          </div>
-          <div class="card-body">
 
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Product</th>
-                  <th scope="col">Quantity</th>
-                  <th scope="col">Location</th>
-                  <th scope="col">Contact</th>
+        <div style="margin-top: -20px; margin-bottom: 160px;">
+          <div class="card"
+            style="width:55rem;  box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.3); text-align: center;  background-color:  rgb(23, 23, 31); border-radius: 14px;"
+            id="cards">
+            <div class="card-body">
+              <h4 class="card-title" style="color: white;">Welcome Johnson!</h4>
+              <h6 style="color: grey;">Explore the dashboard to find out any new current upadates for you
+                on the dashboard </h6>
 
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Kasule Mark</td>
-                  <td>hens</td>
-                  <td>45</td>
-                  <td>Kampala</td>
-                  <td>0756871234</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob Edan</td>
-                  <td>hens</td>
-                  <td>10</td>
-                  <td>Kampala</td>
-                  <td>0756871234</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Mary Susan</td>
-                  <td>hens</td>
-                  <td>10</td>
-                  <td>Kampala</td>
-                  <td>0756871234</td>
-                </tr>
-              </tbody>
-            </table>
+            </div>
           </div>
         </div>
 
+        <h4 style="text-align: center; color: black; "> Bookings & Orders </h4>
+
+        <table class="table table-striped table-dark" style="margin-bottom: 100px; margin-top: 29px;">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Name of Farmer One</th>
+              <th scope="col">ward</th>
+              <th scope="col">Unique Id</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark kim</td>
+              <td>1</td>
+              <td>FO-001</td>
+              <td><button type="submit" class="btn btn-success">Appoint</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob Mee</td>
+              <td>2</td>
+              <td>FO-002</td>
+              <td> <button type="submit" class="btn btn-success">Appoint</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry Gi</td>
+              <td>3</td>
+              <td>FO-003</td>
+              <td> <button type="submit" class="btn btn-success">Appoint</button></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Larry Yo</td>
+              <td>4</td>
+              <td>FO-004</td>
+              <td> <button type="submit" class="btn btn-success">Appoint</button></td>
+            </tr>
+          </tbody>
+        </table>
 
 
-
-        <div id="signupcard" class="card" ">
+        <div id="signupcard" class="card" style="background-color: rgb(15, 15, 20);">
           <div class=" up">
-          <h4>Upload product</h4>
-          <p>Please fill in the different items in order to upload your product </p>
+          <h4 style="margin-left: 200px;">Upload product</h4>
+          <p  style="margin-left: 70px;">Please fill in the different items in order to upload your product </p>
 
         </div>
         <div class="card-body">
-          <form class="row g-3" style="margin: 30px;" action="#" name="upload" onsubmit="return Validate();"
-            method="POST">
+          <form class="row g-3" style="margin: 30px;" id="regForm" action="#" name="upload"
+            onsubmit="return Validate5(event);" method="POST">
 
             <div class="col-md-11">
               <label for="formGroupExampleInput" class="form-label">Name of product:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name of product">
+              <input type="text" class="form-control" id="product" name="product" placeholder="Enter name of product">
+            
               <small id="nameErr"></small>
             </div>
 
             <div class="col-md-11">
               <label for="formGroupExampleInput2" class="form-label">Ward:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter ward name">
+              <input type="text" class="form-control" id="ward" name="ward" placeholder="Enter ward name">
               <small id="wardErr"></small>
             </div>
 
             <div class="col-md-11">
               <label for="formGroupExampleInput" class="form-label">Date:</label>
-              <input type="date" class="form-control" id="formGroupExampleInput"
-                placeholder="Example input placeholder">
-              <small id="dorErr"></small>
+              <input type="date" class="form-control" id="date" name="date" placeholder="Example input placeholder">
+              <small id="dateErr"></small>
             </div>
 
             <div class="col-md-6">
               <label for="formGroupExampleInput2" class="form-label">Unit Price:
               </label>
-              <input type="text" class="form-control" id="formGroupExampleInput2"
+              <input type="number" class="form-control" id="price" name="price"
                 placeholder="Enter the unit price in Ugx">
-              <small id="unitErr"></small>
+              <small id="priceErr"></small>
             </div>
 
             <div class="col-md-6">
               <label for="formGroupExampleInput2" class="form-label">Quantity:
               </label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter the Quantity">
-              <small id="quatErr"></small>
+              <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity">
+              <small id="quantityErr"></small>
             </div>
 
             <div class="col-md-5">
               <label for="inputState" class="form-label">Mode of Payment</label>
-              <select id="inputState" class="form-select">
-                <option selected>cash</option>
-                <option>mobile money</option>
+              <select id="pay" name="pay" class="form-select">
+                <option value="cash">cash</option>
+                <option value="mobilemoney">mobile money</option>
               </select>
               <small id="payErr"></small>
             </div>
             <br>
 
             <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+              <textarea class="form-control" placeholder="Leave a comment here" id="dir" name="dir"
                 style="height: 100px"></textarea>
               <label for="floatingTextarea2">Directions</label>
-              <small id="actErr"></small>
+              <small id="dirErr"></small>
             </div>
             <br>
 
             <div class="col-md-5">
               <label for="inputState" class="form-label">Mode of Delivery</label>
-              <select id="inputState" class="form-select">
-                <option selected>pick up</option>
-                <option>home delivery</option>
+              <select id="delivery" name="delivery" class="form-select">
+                <option value="pickup">pick up</option>
+                <option value="delivery">home delivery</option>
               </select>
               <small id="delErr"></small>
             </div>
@@ -174,19 +184,18 @@
 
             <div class="col-md-5">
               <label for="inputState" class="form-label"> Type of Produce</label>
-              <select id="inputState" class="form-select">
-                <option selected>organic</option>
-                <option>none organic</option>
+              <select id="type" name="type" class="form-select">
+                <option value="organic">organic</option>
+                <option value="nonorganic">none organic</option>
               </select>
-              <small id="prodErr"></small>
+              <small id="typeErr"></small>
             </div>
             <br>
 
-
-            <button type="submit" style="width: 200px; margin-left: 300px; margin-top: 40px;"
+            <button type="submit" style="width: 200px; margin-left: 300px; margin-top: 40px; margin-bottom: 40px; background-color: rgb(62, 143, 40);"
               class="btn btn-success">Upload</button>
 
-            </p>If you have any issues, please contact <a href="mailto:support@ufarm.org">support@ufram.org</a></p>
+            <p>If you have any issues, please contact <a href="mailto:support@ufarm.org">support@ufram.org</a></p>
           </form>
         </div>
       </div>
@@ -197,7 +206,7 @@
   <!-- Nav starts here -->
   <div w3-include-html="../includes/footer.html"></div>
   <!-- Nav ends here -->
-
+  <script src="../js/validate.js"></script>
   <script src="../js/custom.js"></script>
   <script src="../css/boostrap-5.3/js/bootstrap.bundle.js"></script>
 </body>

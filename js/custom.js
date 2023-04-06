@@ -65,3 +65,7 @@ function show3(){
   // document.getElementById('button1').style.backgroundColor="white"
 }
 
+function showalert(){
+  document.getElementById('alert').style.color="green"
+  document.getElementById('alert').style.display ='block';
+}

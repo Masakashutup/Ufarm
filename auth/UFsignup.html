@@ -11,7 +11,7 @@
   <title>SignUp Ufarm</title>
 </head>
 
-<body class="loginbody" onload="document.register.email.focus()">
+<body class="loginbody" onload="document.register.uniqueno.focus()">
   <!-- Nav starts here -->
   <!--<div w3-include-html="../includes/navbar.html"></div> -->
   <!-- Nav ends here -->
@@ -27,14 +27,14 @@
 
           <div class="card-body">
 
-            <form class="floating-form" id="regForm" action="#" name="register" onsubmit="return Validate();"
+            <form class="floating-form" id="regForm" action="#" name="register" onsubmit="return Validate4();"
               method="POST">
               <fieldset>
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" name="email"
+                  <input type="text" class="form-control" id="floatingInput" name="uniqueno"
                     placeholder="name@example.com">
-                  <small id="mailErr"></small>
-                  <label for="floatingInput">Email address</label>
+                  <small id="uniquenoErr"></small>
+                  <label for="floatingInput">Unique ID</label>
                 </div>
 
                 <div class="form-floating mb-3">

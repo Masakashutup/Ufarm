@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../css/boostrap-5.3/css/bootstrap.css" rel="stylesheet">
@@ -11,7 +11,7 @@
   <title>Login Ufarm</title>
 </head>
 
-<body class="loginbody" onload="document.register.email.focus()">
+<body class="loginbody" onload="document.register.uniqueno.focus()">
   <!-- Nav starts here -->
   <!--<div w3-include-html="../includes/navbar.html"></div> -->
   <!-- Nav ends here -->
@@ -27,14 +27,13 @@
 
           <div class="card-body">
 
-            <form class="floating-form" id="regForm" action="#" name="register" onsubmit="return Validate();"
+            <form class="floating-form" id="regForm" action="#" name="register" onsubmit="return Validate4();"
               method="POST">
               <fieldset>
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" name="email"
-                    placeholder="name@example.com">
-                  <small id="mailErr"></small>
-                  <label for="floatingInput">Email address</label>
+                  <input type="text" class="form-control" id="floatingInput" name="uniqueno" placeholder="ID">
+                  <small id="uniquenoErr"></small>
+                  <label for="floatingInput">Unique ID</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -46,12 +45,13 @@
 
                 <button type="submit" class="btn btn-success">Login</button>
               </fieldset>
-<br>
+              <br>
               <p>
                 Please login from here. If you have any issues, please contact <a style="color: rgb(74, 223, 249);"
                   href="mailto:support@ufarm.org">support@ufram.org</a>
               </p>
-              <p>If you have no account, please sign up here <a style= "color: rgb(48, 220, 250);" href="/auth/register.html">Sign up</a> .</p>
+              <p>If you have no account, please sign up here <a style="color: rgb(48, 220, 250);"
+                  href="/auth/register.html">Sign up</a> .</p>
             </form>
 
           </div>
