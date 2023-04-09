@@ -66,6 +66,6 @@ function show3(){
 }
 
 function showalert(){
-  document.getElementById('alert').style.color="green"
-  document.getElementById('alert').style.display ='block';
+  document.querySelector("#alert").innerHTML= 'Succesfully Confirmed! Your order is onthe way';
+  document.getElementById('alert').style.color="green";
 }

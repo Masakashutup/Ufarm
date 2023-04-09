@@ -13,13 +13,13 @@ const Validate = () => {
     email.style.border = "2px solid red";
     mailError.textContent = "Email is required";
     mailError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    email.focus();
+
     return false;
   } else if (!email.value.match(emailregex)) {
     email.style.border = "2px solid red"
     mailError.textContent = "Please put in a correct email address";
     mailError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    email.focus();
+
     return false;
   } else {
     email.style.border = "2px solid green"
@@ -131,9 +131,9 @@ const Validate1 = (event) => {
   let period = document.getElementById("period");
   let male = document.getElementById("male");
   let female = document.getElementById("female");
-  
-  
-  
+
+
+
 
 
   // pick error sections
@@ -408,7 +408,7 @@ const Validate1 = (event) => {
     periodError.innerHTML = "Please the last name must be less than 11 letters"
     periodError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++
-    
+
   } else {
     period.style.border = "2px solid green"
     periodError.textContent = "";
@@ -733,116 +733,116 @@ const Validate5 = (event) => {
   }
 
 
-// validating last name input emptiness
-if (ward.value == "") {
-  ward.style.border = "2px solid red"
-  wardError.innerHTML = "Please last name can not be empty"
-  wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
-// validating last name for minimum length
-else if (ward.value.length < 4) {
-  ward.style.border = "2px solid red"
-  wardError.innerHTML = "Please the last name must be atleast 3 letters"
-  wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
-// validating last name for maximum length
-else if (ward.value.length > 20) {
-  ward.style.border = "2px solid red"
-  wardError.innerHTML = "Please the last name must be less than 11 letters"
-  wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-} else {
-  ward.style.border = "2px solid green"
-  wardError.textContent = "";
-}
+  // validating last name input emptiness
+  if (ward.value == "") {
+    ward.style.border = "2px solid red"
+    wardError.innerHTML = "Please last name can not be empty"
+    wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating last name for minimum length
+  else if (ward.value.length < 4) {
+    ward.style.border = "2px solid red"
+    wardError.innerHTML = "Please the last name must be atleast 3 letters"
+    wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating last name for maximum length
+  else if (ward.value.length > 20) {
+    ward.style.border = "2px solid red"
+    wardError.innerHTML = "Please the last name must be less than 11 letters"
+    wardError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    ward.style.border = "2px solid green"
+    wardError.textContent = "";
+  }
 
-// date  validations
-if (date.value == "") {
-  date.style.border = "2px solid red"
-  dateError.innerHTML = "Please last name can not be empty"
-  dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
+  // date  validations
+  if (date.value == "") {
+    date.style.border = "2px solid red"
+    dateError.innerHTML = "Please last name can not be empty"
+    dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
 
-else if (date.value.length < 4) {
-  date.style.border = "2px solid red"
-  dateError.innerHTML = "Please the last name must be atleast 3 letters"
-  dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
+  else if (date.value.length < 4) {
+    date.style.border = "2px solid red"
+    dateError.innerHTML = "Please the last name must be atleast 3 letters"
+    dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
 
-else if (date.value.length > 20) {
-  date.style.border = "2px solid red"
-  dateError.innerHTML = "Please the last name must be less than 11 letters"
-  dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-} else {
-  date.style.border = "2px solid green"
-  dateError.textContent = "";
-}
-
-
-if (price.value == "") {
-  price.style.border = "2px solid red"
-  priceError.innerHTML = "Please last name can not be empty"
-  priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
-
-else if (price.value.length < 4) {
-  price.style.border = "2px solid red"
-  priceError.innerHTML = "Please the last name must be atleast 3 letters"
-  priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
-
-else if (price.value.length > 20) {
-  price.style.border = "2px solid red"
-  priceError.innerHTML = "Please the last name must be less than 11 letters"
-  priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-} else {
-  price.style.border = "2px solid green"
-  priceError.textContent = "";
-}
+  else if (date.value.length > 20) {
+    date.style.border = "2px solid red"
+    dateError.innerHTML = "Please the last name must be less than 11 letters"
+    dateError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    date.style.border = "2px solid green"
+    dateError.textContent = "";
+  }
 
 
-if (quantity.value == "") {
-  quantity.style.border = "2px solid red"
-  quantityError.innerHTML = "Please last name can not be empty"
-  quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
+  if (price.value == "") {
+    price.style.border = "2px solid red"
+    priceError.innerHTML = "Please last name can not be empty"
+    priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
 
-else if (quantity.value.length < 4) {
-  quantity.style.border = "2px solid red"
-  quantityError.innerHTML = "Please the last name must be atleast 3 letters"
-  quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-}
+  else if (price.value.length < 4) {
+    price.style.border = "2px solid red"
+    priceError.innerHTML = "Please the last name must be atleast 3 letters"
+    priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
 
-else if (quantity.value.length > 20) {
-  quantity.style.border = "2px solid red"
-  quantityError.innerHTML = "Please the last name must be less than 11 letters"
-  quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-} else {
-  quantity.style.border = "2px solid green"
-  quantityError.textContent = "";
-}
+  else if (price.value.length > 20) {
+    price.style.border = "2px solid red"
+    priceError.innerHTML = "Please the last name must be less than 11 letters"
+    priceError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    price.style.border = "2px solid green"
+    priceError.textContent = "";
+  }
 
-// pay validations
-if (pay.value == "") {
-  pay.style.border = "2px solid red";
-  payError.textContent = "Please select a payment mode";
-  payError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-  error++
-} else {
-  pay.style.border = "2px solid green"
-  payError.textContent = "";
-}
+
+  if (quantity.value == "") {
+    quantity.style.border = "2px solid red"
+    quantityError.innerHTML = "Please last name can not be empty"
+    quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+
+  else if (quantity.value.length < 4) {
+    quantity.style.border = "2px solid red"
+    quantityError.innerHTML = "Please the last name must be atleast 3 letters"
+    quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+
+  else if (quantity.value.length > 20) {
+    quantity.style.border = "2px solid red"
+    quantityError.innerHTML = "Please the last name must be less than 11 letters"
+    quantityError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    quantity.style.border = "2px solid green"
+    quantityError.textContent = "";
+  }
+
+  // pay validations
+  if (pay.value == "") {
+    pay.style.border = "2px solid red";
+    payError.textContent = "Please select a payment mode";
+    payError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    pay.style.border = "2px solid green"
+    payError.textContent = "";
+  }
 
   // validating directions input emptiness
   if (dir.value == "") {
@@ -896,5 +896,167 @@ if (pay.value == "") {
     event.preventDefault()
   }
 }
+
+
+const Validate6 = (event) => {
+  let error = 0
+  // pick inputs
+  let fullname = document.getElementById("fullname");
+  let email = document.getElementById("email")
+  let contact = document.getElementById("contact")
+  let address = document.getElementById("address");
+  let shipping = document.getElementById("shipping");
+  let pay = document.getElementById("pay");
+  let male = document.getElementById("male");
+  let female = document.getElementById("female");
+
+
+
+
+  // pick error sections
+  let fullnameError = document.getElementById("fullnameerr")
+  let emailError = document.getElementById("emailerr")
+  let contactError = document.getElementById("contacterr")
+  let addressError = document.getElementById("addresserr");
+  let shippingError = document.getElementById("shippingerr");
+  let payError = document.getElementById("payerr");
+  let genderError = document.getElementById("gendererr");
+
+
+
+  
+  // validating first name input emptiness
+  if (fullname.value == "") {
+    fullname.style.border = "2px solid red"
+    fullnameError.innerHTML = "Please first name can not be empty"
+    fullnameError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating first name for minimum length
+  else if (fullname.value.length < 5) {
+    fullname.style.border = "2px solid red"
+    fullnameError.innerHTML = "Please the first name must be atleast 3 letters"
+    fullnameError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating first name for maximum length
+  else if (fullname.value.length > 50) {
+    fullname.style.border = "2px solid red"
+    fullnameError.innerHTML = "Please the first name must be less than 11 letters"
+    fullnameError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    fullname.style.border = "2px solid green"
+    fullnameError.innerHTML = ""
+  }
+
+
+// email validations
+const emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+if (email.value == "") {
+  email.style.border = "2px solid red";
+  emailError.textContent = "Email is required";
+  emailError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++;
+} else if (!email.value.match(emailregex)) {
+  email.style.border = "2px solid red"
+  emailError.textContent = "Please put in a correct email address";
+  emailError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+  error++;
+} else {
+  email.style.border = "2px solid green"
+  emailError.textContent = "";
+
+}
+
+  // validating last name input emptiness
+  if (contact.value == "") {
+    contact.style.border = "2px solid red"
+    contactError.innerHTML = "Please last name can not be empty"
+    contactError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating last name for minimum length
+  else if (contact.value.length < 10) {
+    contact.style.border = "2px solid red"
+    contactError.innerHTML = "Please the last name must be atleast 3 letters"
+    contactError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+  // validating last name for maximum length
+  else if (contact.value.length > 10) {
+    contact.style.border = "2px solid red"
+    contactError.innerHTML = "Please the last name must be less than 11 letters"
+    contactError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    contact.style.border = "2px solid green"
+    contactError.textContent = "";
+  }
+
+  // date  validations
+  if (address.value == "") {
+    address.style.border = "2px solid red"
+    addressError.innerHTML = "Please last name can not be empty"
+    addressError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+
+  else if (address.value.length < 5) {
+    address.style.border = "2px solid red"
+    addressError.innerHTML = "Please the last name must be atleast 3 letters"
+    addressError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  }
+
+  else if (address.value.length > 20) {
+    address.style.border = "2px solid red"
+    addressError.innerHTML = "Please the last name must be less than 11 letters"
+    addressError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    address.style.border = "2px solid green"
+    addressError.textContent = "";
+  }
+
+   // pay type validations
+   if (shipping.value == "") {
+    shipping.style.border = "2px solid red";
+    shippingError.textContent = "Please select a role";
+    shippingError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    shipping.style.border = "2px solid green"
+    shippingError.textContent = "";
+  }
+
+  // pay validations
+  if (pay.value == "") {
+    pay.style.border = "2px solid red";
+    payError.textContent = "Please select a payment mode";
+    payError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+    error++
+  } else {
+    pay.style.border = "2px solid green"
+    payError.textContent = "";
+  }
+
+//  // gender validations
+//  if (male.checked == false && female.checked == false) {
+//   // if(!(female.checked && male.checked)){
+//   genderError.textContent = "Please select gender";
+//   genderError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+//   //   return false;
+//   error++
+// } else {
+//   genderError.textContent = "";
+// }
+  
+  if (error > 0) {
+    event.preventDefault()
+  }
+}
+
+
 
 
